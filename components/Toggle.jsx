@@ -1,12 +1,17 @@
+'use client';
+
+import React from 'react';
+import useTheme from '@/utils/useTheme';
 import styles from '@/styles/toggle.module.css';
 
-const Toggle = () => {
+export default function Toggle() {
+  const { theme, themes, setTheme } = useTheme();
+  const toggleTheme = () => setTheme((theme === themes.dark) ? themes.light : themes.dark);
+
   return (
     <label htmlFor="toggle" className={styles.switch}>
-        <input type="checkbox" id="toggle" />
+        <input type="checkbox" id="toggle" onChange={toggleTheme}/>
         <span className={styles.slider}></span>
     </label>
   );
 }
-
-export default Toggle;
