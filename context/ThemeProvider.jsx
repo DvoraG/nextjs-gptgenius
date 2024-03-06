@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import ThemeContext from "./ThemeContext";
+import AntiFlickerScript from "@/components/AntiFlickerScript";
 import { getTheme, saveTheme, themes } from "@/utils/theme";
 
 export default function ThemeProvider({children, storageKey, defaultTheme}) {
@@ -13,6 +14,7 @@ export default function ThemeProvider({children, storageKey, defaultTheme}) {
 
     return (
         <ThemeContext.Provider value={{ theme, themes, setTheme}}>
+            <AntiFlickerScript storageKey={storageKey} theme={defaultTheme} />
             {children}
         </ThemeContext.Provider>
     );
