@@ -6,19 +6,34 @@
   --accent: #433bff;
 }
 
-.light {
+:root.dark {
+  --text: #fbfbfe;
+  --background: #050315;
+  --primary: #dedcff;
+  --secondary: #2f27ce;
+}
+
+:root.light {
   --text: #050315;
   --background: #fbfbfe;
   --primary: #2f27ce;
   --secondary: #dedcff;
 }
 
-.dark {
-  --text: #fbfbfe;
-  --background: #050315;
-  --primary: #dedcff;
-  --secondary: #2f27ce;
-}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fbfbfe;
+    --background: #050315;
+    --primary: #dedcff;
+    --secondary: #2f27ce;
+  }
+  :root.light {
+    --text: #050315;
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dedcff;
+  }
+} */
 
 * {
   box-sizing: border-box;

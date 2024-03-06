@@ -30,11 +30,11 @@
     transition: 0.4s;
 }
 input:checked + .slider {
-    background-color: var(--primary);
+    background-color: var(--background);
 }
 
 input:checked + .slider::before {
-    background-color: var(--background);
+    background-color: var(--primary);
     transform: translateX(2rem);
 }
 
