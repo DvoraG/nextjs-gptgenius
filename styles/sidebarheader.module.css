@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin-block-end: 0.25rem;
+    padding-inline: 0.25rem;
+    gap: 1rem;
+}
+.icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary);
+}
+.brand {
+    color: var(--primary);
+}
