@@ -1,0 +1,26 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: minmax(14rem, 1.25fr) 4fr;
+    transition: 0.4s;
+}
+.contentBase {
+    min-height: 100%;
+    padding: 1rem 1.25rem;
+    background: var(--background);
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar {
+    transition: 0.4s;
+}
+.sidebarToggle {
+    opacity: 0;
+}
+@media (40rem > width) {
+    .sidebarToggle {
+        opacity: 1;
+    }
+    .sidebar {
+        transform: translateX(-150%);
+    }
+}

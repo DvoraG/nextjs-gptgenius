@@ -5,11 +5,19 @@
   --secondary: #dedcff;
   --accent: #433bff;
 }
-@media(prefers-color-scheme: dark) {
-  :root {
-    --text: #fbfbfe;
-    --background: #050315;
-  }
+
+.light {
+  --text: #050315;
+  --background: #fbfbfe;
+  --primary: #2f27ce;
+  --secondary: #dedcff;
+}
+
+.dark {
+  --text: #fbfbfe;
+  --background: #050315;
+  --primary: #dedcff;
+  --secondary: #2f27ce;
 }
 
 * {
@@ -43,10 +51,16 @@ a {
   color: inherit;
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
 p {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-block-end: 1rem;
+}
+input[type="checkbox"] {
+  appearance: none;
 }
 .btn {
   display: inline-block;
@@ -82,8 +96,3 @@ p {
   justify-content: center;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */

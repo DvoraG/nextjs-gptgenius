@@ -1,0 +1,9 @@
+.sidebar {
+    width: 20rem;
+    height: 100svh;
+    background: var(--secondary);
+    padding: 3rem 2rem;
+    display: grid; 
+    gap: 0.5rem;
+    grid-template-rows: auto 1fr auto;
+}
