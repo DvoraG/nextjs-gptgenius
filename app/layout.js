@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import ThemeProvider from "@/context/ThemeProvider";
 import "./globals.css";
+import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 const THEME_STORAGE_KEY = 'theme-preference';
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={inter.className}>
           <ThemeProvider storageKey={THEME_STORAGE_KEY}>
-            {children}
+            <Providers>
+              {children}
+            </Providers>
           </ThemeProvider>
         </body>
       </html>

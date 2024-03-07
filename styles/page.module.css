@@ -11,7 +11,7 @@
     max-width: 50ch;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 8px var(--gray);
 }
 .heroContentTitle {
   color: var(--accent);
