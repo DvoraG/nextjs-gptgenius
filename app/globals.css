@@ -2,38 +2,25 @@
   --text: #050315;
   --background: #fbfbfe;
   --primary: #2f27ce;
-  --secondary: #dedcff;
+  --secondary: #f89f9f;
   --accent: #433bff;
+  --gray: rgba(0,0,0,0.3);
 }
 
 :root.dark {
   --text: #fbfbfe;
   --background: #050315;
-  --primary: #dedcff;
-  --secondary: #2f27ce;
+  --primary: #ff9f9f;
+  --secondary: #433bff;
+  --gray: rgba(255,255,255,0.3);
 }
 
 :root.light {
   --text: #050315;
   --background: #fbfbfe;
   --primary: #2f27ce;
-  --secondary: #dedcff;
+  --secondary: #f89f9f;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --text: #fbfbfe;
-    --background: #050315;
-    --primary: #dedcff;
-    --secondary: #2f27ce;
-  }
-  :root.light {
-    --text: #050315;
-    --background: #fbfbfe;
-    --primary: #2f27ce;
-    --secondary: #dedcff;
-  }
-} */
 
 * {
   box-sizing: border-box;
@@ -74,8 +61,11 @@ p {
   line-height: 1.5;
   margin-block-end: 1rem;
 }
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="text"] {
   appearance: none;
+  outline: none;
+  
 }
 .btn {
   display: inline-block;
@@ -97,11 +87,11 @@ input[type="checkbox"] {
 }
 .btn-primary:hover,
 .btn-secondary:hover {
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px 8px var(--gray);
 }
 .btn-primary:active,
 .btn-secondary:active {
-  box-shadow: inset 4px 4px 8px rgba(0,0,0,0.3);
+  box-shadow: inset 4px 4px 8px var(--gray);
 }
 .center {
   width: 100%;

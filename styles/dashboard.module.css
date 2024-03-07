@@ -4,11 +4,11 @@
     transition: 0.4s;
 }
 .contentBase {
-    min-height: 100%;
     padding: 1rem 1.25rem;
     background: var(--background);
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
 }
 .sidebar {
     transition: 0.4s;
