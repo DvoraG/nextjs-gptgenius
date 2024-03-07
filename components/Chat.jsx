@@ -2,14 +2,19 @@
 
 import { useState } from "react";
 import styles from '@/styles/chat.module.css';
+import { useMutation } from "@tanstack/react-query";
+import { generateChatResponse } from "@/utils/action";
 
 const Chat = () => {
     const [text, setText] = useState('');
     const [message, setMessage] = useState('');
-
+    const {mutate} = useMutation({
+      mutationFn: (message) => generateChatResponse(message)
+    });
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(text);
+        mutate(text);
     };
   return (
     <div className={styles.container}>
